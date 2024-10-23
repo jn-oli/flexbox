@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <body>
+        <div class="floating-toys">
+            <div class="floating-toy" style="top: 20%; left: 10%">🚀</div>
+            <div class="floating-toy" style="top: 40%; right: 15%">🎮</div>
+            <div class="floating-toy" style="top: 70%; left: 20%">🎪</div>
+            <div class="floating-toy" style="top: 30%; right: 25%">🎯</div>
+        </div>
+    
+        <div class="toy-box">🎁</div>
+    
+        <div class="top-bar">
+            <div class="quick-links">
+                <a href="#home">🏠 Home</a>
+                <a href="#characters">🤠 Characters</a>
+                <a href="#movies">🎬 Movies</a>
+                <a href="#toys">🎮 Toys</a>
+                <a href="#contact">📞 Contact</a>
+            </div>
+        </div>
+    
+        <header>
+            <nav class="navbar">
+                <div class="logo">🎯 Toy Story World</div>
+            </nav>
+        </header>
+    
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to Andy's Room! 🚀</h1>
+                <p>Where Every Toy Has a Story to Tell...</p>
+            </div>
+        </section>
+    
+        <main>
+            <div class="character-card">
+                <h2>🤠 Meet Sheriff Woody</h2>
+                <p>"There's a snake in my boot!" - Your favorite pull-string cowboy!</p>
+            </div>
+    
+            <div class="character-card">
+                <h2>🚀 Meet Buzz Lightyear</h2>
+                <p>"To infinity and beyond!" - The space ranger who stole our hearts!</p>
+            </div>
+    
+            <div class="fun-fact">
+                <h3>🎯 Fun Fact Alert!</h3>
+                <p>Did you know? Toy Story was the first fully computer-animated feature film ever made!</p>
+            </div>
+    
+            <section class="gallery">
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://www.shutterstock.com/image-photo/niepolomice-poland-may-8-2022-600nw-2157646331.jpg" alt="Woody" height="300" width="400">
+                        <div class="gallery-caption">Howdy Partner! 🤠</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/rockcms/2022-06/220617-lightyear-mjf-1648-dd3fa6.jpg" alt="Buzz" height="300" width="400">
+                        <div class="gallery-caption">To Infinity... 🚀</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    
+        <footer class="footer">
+            <div class="footer-content">
+                <h3>🎮 Join the Adventure!</h3>
+                <p>Email us: toybox@toystoryworld.com</p>
+                <p>Call us: +977-980004545</p>
+            </div>
+        </footer>
+    
+        <script>
+            // Toy box click animation
+            document.querySelector('.toy-box').addEventListener('click', function() {
+                this.style.transform = 'scale(1.2)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 200);
+            });
+    
+            // Random floating toy movement
+            const toys = document.querySelectorAll('.floating-toy');
+            toys.forEach(toy => {
+                setInterval(() => {
+                    toy.style.transform = `translate(${Math.random() * 20 - 10}px, ${Math.random() * 20 - 10}px)`;
+                }, 3000);
+            });
+        </script>
+    </body>
+    </html>
